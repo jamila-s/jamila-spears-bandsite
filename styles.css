@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Next";
+}
+
+.navbar {
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: left;
+    flex-direction: row;
+  }
+}
+.navbar h1 {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: auto;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .navbar h1 {
+    font-size: 3rem;
+    margin: 0px 50px 0 30px;
+    padding: 20px 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar h1 {
+    font-size: 3rem;
+    margin: 0px 50px 0 100px;
+    padding: 20px 10px;
+  }
+}
+.navbar__links {
+  display: flex;
+}
+.navbar__links a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #AFAFAF;
+  margin: auto;
+  padding-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .navbar__links a {
+    padding: 20px 30px;
+    font-size: 1.5rem;
+  }
+}
+
+.hero {
+  background-color: rgba(50, 50, 50, 0.5);
+  background-image: url(../../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+.hero h1 {
+  color: #FFFFFF;
+  margin: auto 20px;
+  font-size: 3rem;
+  font-weight: 600;
+}/*# sourceMappingURL=styles.css.map */

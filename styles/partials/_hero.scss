@@ -1,0 +1,21 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.hero {
+    background-color: rgba(50, 50, 50, .5);
+    background-image: url(../../assets/Images/hero-bio.jpg);
+    background-size: cover;
+   
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+
+    h1 {
+        color: $primary-text-light;
+        margin: auto 20px;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+}

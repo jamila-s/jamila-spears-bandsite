@@ -1,0 +1,57 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.navbar {
+
+    background-color: $primary-text-dark ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+       justify-content: left;
+       flex-direction: row;
+       
+    }
+
+    h1 {
+        text-transform: uppercase;
+        color: $primary-text-light;
+        font-size: 2rem;
+        font-weight: 400;
+        margin: auto;
+        padding-top: 20px;
+
+        @include tablet {
+            font-size: 3rem;
+            margin: 0px 50px 0 30px;
+            padding: 20px 10px;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin: 0px 50px 0 100px;
+            padding: 20px 10px;
+
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        
+        a{
+            font-size: 2rem;
+            text-decoration: none;
+            color: $secondary-text-color;
+            margin: auto;
+            padding-bottom: 0px;
+            
+            @include tablet {
+                // margin: 0px 20px 10px 0px;
+                padding: 20px 30px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
