@@ -14,16 +14,16 @@
        
     }
 
-    h1 {
+    &__title {
         text-transform: uppercase;
         color: $primary-text-light;
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: 1.8rem;
+        font-weight: 300;
         margin: auto;
         padding-top: 20px;
 
         @include tablet {
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0px 50px 0 30px;
             padding: 20px 10px;
         }
@@ -49,9 +49,22 @@
             
             @include tablet {
                 // margin: 0px 20px 10px 0px;
-                padding: 20px 30px;
-                font-size: 1.5rem;
+                padding: 20px 30px 24px 30px;
+                font-size: 1.3rem;
             }
         }
     }
+}
+
+a:link {
+    color: $secondary-text-color;
+}
+a:visited {
+    color: $secondary-text-color;
+}
+
+a:hover, a:active{
+    color: $primary-text-light;
+    border-bottom: white 4px solid;
+
 }

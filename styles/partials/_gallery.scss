@@ -1,0 +1,45 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.gallery {
+    background-color: $alt-light-background;
+
+    &__title{
+        font-weight: 500 ;
+        font-size: 2rem;
+        padding-left: 16px;
+        padding-top: 16px;
+
+        @include tablet {
+            padding-left: 46px;
+            padding-top: 36px;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 36px;
+
+        }
+
+       
+        
+        img {
+            padding: 16px;
+            margin: auto;
+            width: 100%;
+            
+            @include tablet {
+                width: 30%;
+                padding: 10px;
+            }
+        }
+       
+
+    }
+}

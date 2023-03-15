@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 .biography {
 
     display: flex;
@@ -14,19 +17,63 @@
         width: 100%;
         padding: 0 16px 16px 16px;
         height: 35vh;
+
+        @include tablet {
+            padding: 20px 48px 24px 48px;
+           
+        }
     }
 
     &__quote {
         padding: 0 16px 16px 16px;
         font-weight: 500;
+
+        @include tablet {
+            padding: 20px 36px 24px 36px;
+            font-size: 1.5rem;
+           
+        }
+
+        &--name {
+            padding: 0 16px 16px 16px;
+
+            @include tablet {
+                padding: 0px 36px 24px 36px;
+                font-size: 1rem;
+                font-weight: 500;
+               
+            }
+
+        }
     }
 
     &__description {
         padding: 0 16px 16px 16px;
 
+        &--container{
+            display: flex;
+            flex-direction: column;
+
+        @include tablet {
+            padding: 20px 36px 24px 36px;
+            flex-direction: row;
+            width: 100%;
+            // margin: auto;
+        }
+
+    }
+
         &--title {
             padding: 0 16px 16px 16px;
             font-size: 1.2rem; 
+
+            @include tablet {
+                padding: 20px 36px 24px 36px;
+                width: 100%;
+                font-weight: 500;
+                font-size: 2rem;
+               
+            }
         }
     }
 }

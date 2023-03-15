@@ -11,6 +11,10 @@
     display: flex;
     justify-content: left;
 
+    @include tablet {
+     padding: 0px 36px;
+    }
+
     h1 {
         color: $primary-text-light;
         margin: auto 20px;
