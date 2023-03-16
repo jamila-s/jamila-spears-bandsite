@@ -1,7 +1,60 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     // font-size: 12px;
     font-family: 'Avenir Next';
+    max-width: 1400px;
+}
+
+.navbar {
+
+    background-color: $primary-text-dark ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+       justify-content: left;
+       flex-direction: row;
+       
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $primary-text-light;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: auto;
+        padding-top: 20px;
+
+        @include tablet {
+            font-size: 2rem;
+            margin: 0px 50px 0 30px;
+            padding: 20px 10px;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin: 0px 50px 0 100px;
+            padding: 20px 10px;
+
+        }
+    }
+}
+
+a:link {
+    color: $secondary-text-color;
+}
+a:visited {
+    color: $secondary-text-color;
+}
+
+a:hover, a:active{
+    color: $primary-text-light;
+    
+
 }

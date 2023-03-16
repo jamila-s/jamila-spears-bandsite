@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Avenir Next";
+  max-width: 1400px;
 }
 
 .navbar {
@@ -39,22 +40,6 @@
     padding: 20px 10px;
   }
 }
-.navbar__links {
-  display: flex;
-}
-.navbar__links a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #AFAFAF;
-  margin: auto;
-  padding-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .navbar__links a {
-    padding: 20px 30px 24px 30px;
-    font-size: 1.3rem;
-  }
-}
 
 a:link {
   color: #AFAFAF;
@@ -66,7 +51,6 @@ a:visited {
 
 a:hover, a:active {
   color: #FFFFFF;
-  border-bottom: white 4px solid;
 }
 
 .hero {
