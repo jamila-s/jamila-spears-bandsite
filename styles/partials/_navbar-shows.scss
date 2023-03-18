@@ -6,13 +6,12 @@
         display: flex;
         width: 100%;
 
-        &--option-1 {
+        &--option-2 {
             width: 50%;
             border-bottom: $primary-text-light solid 4px;
             border-spacing: 20px;
             padding-bottom: 10px;
             display: flex;
-        
         
         a{
             font-size: 1.5rem;
@@ -26,7 +25,6 @@
                 font-size: 1.3rem;
             }
         }
-
     }
   }
 }

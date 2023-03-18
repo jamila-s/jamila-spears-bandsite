@@ -54,8 +54,7 @@ a:hover, a:active {
 }
 
 .hero {
-  background-color: rgba(50, 50, 50, 0.5);
-  background-image: url(../../assets/Images/hero-bio.jpg);
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/Images/hero-bio.jpg);
   background-size: cover;
   height: 40vh;
   width: 100%;
@@ -70,8 +69,13 @@ a:hover, a:active {
 .hero h1 {
   color: #FFFFFF;
   margin: auto 20px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
 }
 
 .biography {
@@ -96,7 +100,7 @@ a:hover, a:active {
 }
 .biography__quote {
   padding: 0 16px 16px 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .biography__quote {
@@ -106,12 +110,13 @@ a:hover, a:active {
 }
 .biography__quote--name {
   padding: 0 16px 16px 16px;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .biography__quote--name {
     padding: 0px 36px 24px 36px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 .biography__description {
@@ -131,6 +136,7 @@ a:hover, a:active {
 .biography__description--title {
   padding: 0 16px 16px 16px;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .biography__description--title {
@@ -177,4 +183,123 @@ a:hover, a:active {
     width: 30%;
     padding: 10px;
   }
+}
+
+.navbar__links {
+  display: flex;
+  width: 100%;
+}
+.navbar__links--option-1 {
+  width: 50%;
+  border-bottom: #FFFFFF solid 4px;
+  border-spacing: 20px;
+  padding-bottom: 10px;
+  display: flex;
+}
+.navbar__links--option-1 a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #AFAFAF;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .navbar__links--option-1 a {
+    padding: 20px 30px 24px 30px;
+    font-size: 1.3rem;
+  }
+}
+
+a:link {
+  color: #AFAFAF;
+}
+
+a:visited {
+  color: #AFAFAF;
+}
+
+a:hover, a:active {
+  color: #FFFFFF;
+}
+
+.navbar__links {
+  display: flex;
+  width: 100%;
+}
+.navbar__links--option-2 {
+  width: 50%;
+  border-bottom: #FFFFFF solid 4px;
+  border-spacing: 20px;
+  padding-bottom: 10px;
+  display: flex;
+}
+.navbar__links--option-2 a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #AFAFAF;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .navbar__links--option-2 a {
+    padding: 20px 30px 24px 30px;
+    font-size: 1.3rem;
+  }
+}
+
+a:link {
+  color: #AFAFAF;
+}
+
+a:visited {
+  color: #AFAFAF;
+}
+
+a:hover, a:active {
+  color: #FFFFFF;
+}
+
+.footer {
+  background: #323232;
+  color: #FFFFFF;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.footer__container--title {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+.footer__socials--icon {
+  margin: 16px 30px 12px 0px;
+  height: 30px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts--description {
+  padding-top: 16px;
+}
+.footer__contacts--name {
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+.footer__contacts--address {
+  padding-bottom: 16px;
+  font-weight: 400;
+}
+.footer__contacts--email {
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+.footer__logo {
+  margin-top: 40px;
+}
+.footer__logo--title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 16px;
 }/*# sourceMappingURL=styles.css.map */
