@@ -3,12 +3,13 @@
 
 .gallery {
     background-color: $alt-light-background;
+    padding: 16px;
 
     &__title{
         font-weight: 500 ;
         font-size: 2rem;
-        padding-left: 16px;
-        padding-top: 16px;
+        padding-bottom: 16px;
+    
 
         @include tablet {
             padding-left: 46px;
@@ -19,6 +20,7 @@
     &__container{
         display: flex;
         flex-direction: column;
+        
 
         @include tablet {
             flex-direction: row;
@@ -30,7 +32,7 @@
        
         
         img {
-            padding: 16px;
+            padding-bottom: 16px;
             margin: auto;
             width: 100%;
             
