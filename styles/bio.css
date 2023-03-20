@@ -101,29 +101,29 @@
     padding: 0rem 1rem;
   }
 }
-.biography__description--container {
+.biography__description-container {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .biography__description--container {
+  .biography__description-container {
     padding: 0.5rem 3rem;
     flex-direction: row;
     margin: auto;
   }
 }
 @media (min-width: 1280px) {
-  .biography__description--container {
+  .biography__description-container {
     margin: 0rem 1.5rem;
   }
 }
-.biography__description--title {
+.biography__description-title {
   padding-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
-  .biography__description--title {
+  .biography__description-title {
     padding: 1.5rem 4rem;
     width: 100%;
     font-weight: 500;
@@ -131,7 +131,7 @@
   }
 }
 @media (min-width: 1280px) {
-  .biography__description--title {
+  .biography__description-title {
     margin: 0rem 1.5rem;
   }
 }
@@ -192,19 +192,19 @@
     padding-left: 4.25rem;
   }
 }
-.footer__container--title {
+.footer__container-title {
   font-size: 2rem;
   font-weight: 600;
   margin-right: 2.5rem;
   padding-bottom: 1.25rem;
 }
-.footer__container--box {
+.footer__container-box {
   padding-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .footer__container--box {
+  .footer__container-box {
     flex-direction: row;
     padding: 1.5rem 1.875rem 1rem 0;
   }
@@ -231,30 +231,30 @@
     width: 70%;
   }
 }
-.footer__contacts--description {
+.footer__contacts-description {
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .footer__contacts--description {
+  .footer__contacts-description {
     padding-right: 48px;
     flex-wrap: nowrap;
     min-width: 35%;
   }
 }
-.footer__contacts--name {
+.footer__contacts-name {
   font-weight: 600;
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .footer__contacts--name {
+  .footer__contacts-name {
     flex-wrap: nowrap;
   }
 }
-.footer__contacts--address {
+.footer__contacts-address {
   padding-bottom: 16px;
   font-weight: 400;
 }
-.footer__contacts--email {
+.footer__contacts-email {
   padding-bottom: 20px;
   font-weight: 400;
 }
