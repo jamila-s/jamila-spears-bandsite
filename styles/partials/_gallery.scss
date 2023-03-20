@@ -3,42 +3,43 @@
 
 .gallery {
     background-color: $alt-light-background;
-    padding: 16px;
+    padding: 1rem;
 
     &__title{
         font-weight: 500 ;
         font-size: 2rem;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
     
 
         @include tablet {
-            padding-left: 46px;
-            padding-top: 36px;
+            font-size: 3rem;
+            padding-left: 1rem;
+            padding-top: 2.25rem;
         }
     }
 
     &__container{
         display: flex;
         flex-direction: column;
+        padding: 0rem 1rem;
         
 
         @include tablet {
             flex-direction: row;
             flex-wrap: wrap;
-            padding: 36px;
-
+            padding: 0rem;
         }
 
        
         
         img {
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             margin: auto;
             width: 100%;
             
             @include tablet {
                 width: 30%;
-                padding: 10px;
+                padding: 1rem 0rem;
             }
         }
        

@@ -10,12 +10,12 @@
     justify-content: left;
 
     @include tablet {
-     padding: 0px 36px;
+     padding: 0rem 2.25rem;
     }
 
     h1 {
         color: $primary-text-light;
-        margin: auto 20px;
+        margin: auto 1.25rem;
         font-size: 2rem;
         font-weight: 600;
 
