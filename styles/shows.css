@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Next";
+  max-width: 1920px;
+}
+
+.navbar {
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: left;
+    flex-direction: row;
+  }
+}
+.navbar__logo {
+  display: flex;
+}
+.navbar__logo img {
+  margin: auto;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .navbar__logo img {
+    font-size: 2rem;
+    margin: 0rem 3.125rem 0 1.875rem;
+    padding: 2.625rem 0.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar__logo img {
+    font-size: 3rem;
+    margin: 0rem 3.125rem 0 6.25rem;
+    padding: 0rem 0.625rem;
+  }
+}
+.navbar__links {
+  display: flex;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .navbar__links {
+    width: 20%;
+  }
+}
+.navbar__links li {
+  display: flex;
+  width: 100%;
+}
+.navbar__links-item--active {
+  border-bottom: #FFFFFF solid 4px;
+}
+.navbar__links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #AFAFAF;
+  margin: auto;
+  padding-top: 16px;
+}
+@media (min-width: 768px) {
+  .navbar__links a {
+    padding: 1.875rem 1.875rem 1.5rem 10px;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar__links a {
+    padding: 1.25rem 1rem 1.5rem 1.875rem;
+    font-size: 1.3rem;
+  }
+}
+
+a:link {
+  color: #AFAFAF;
+}
+
+a:visited {
+  color: #AFAFAF;
+}
+
+a:hover, a:active {
+  color: #FFFFFF;
+}
+
+.hero {
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 0rem 2.25rem;
+  }
+}
+.hero h1 {
+  color: #FFFFFF;
+  margin: auto 1.25rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+.hero__index {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/Images/hero-bio.jpg);
+}
+.hero__shows {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-shows.jpg);
+}
+
+.footer {
+  background: #323232;
+  color: #FFFFFF;
+  position: relative;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    padding-left: 4.25rem;
+  }
+}
+.footer__container-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+.footer__container-box {
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__container-box {
+    flex-direction: row;
+    padding: 1.5rem 1.875rem 1rem 0;
+  }
+}
+.footer__socials--icon {
+  margin: 0.3125rem 1.875rem 0rem 0rem;
+  height: 28px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .footer__contacts {
+    flex-direction: row;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contacts {
+    width: 70%;
+  }
+}
+.footer__contacts-description {
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__contacts-description {
+    padding-right: 48px;
+    flex-wrap: nowrap;
+    min-width: 35%;
+  }
+}
+.footer__contacts-name {
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .footer__contacts-name {
+    flex-wrap: nowrap;
+  }
+}
+.footer__contacts-address {
+  padding-bottom: 16px;
+  font-weight: 400;
+}
+.footer__contacts-email {
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+.footer__logo {
+  margin-top: 40px;
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    right: 5%;
+    top: 3%;
+  }
+}/*# sourceMappingURL=shows.css.map */
