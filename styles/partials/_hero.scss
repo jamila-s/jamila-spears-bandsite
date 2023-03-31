@@ -36,6 +36,10 @@
         background-position: center;
         display: block;
         height: 50vh;
+
+        @include tablet {
+        padding-top: 6rem;
+        }
     }
 
     &__title {

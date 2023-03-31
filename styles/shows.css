@@ -120,6 +120,11 @@ a:hover, a:active {
   display: block;
   height: 50vh;
 }
+@media (min-width: 768px) {
+  .hero__shows {
+    padding-top: 6rem;
+  }
+}
 .hero__title {
   color: #FFFFFF;
   padding: 2rem 1rem 1rem 1rem;
@@ -232,26 +237,54 @@ a:hover, a:active {
   padding: 1rem;
   font-weight: 500;
 }
+@media (min-width: 768px) {
+  .shows__title {
+    padding: 2rem;
+  }
+}
 .shows__info {
   display: flex;
   flex-direction: column;
   border-bottom: #E1E1E1 solid 2px;
   padding-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  .shows__info {
+    flex-direction: row;
+  }
+}
 .shows__info li {
   list-style-type: none;
   padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__info li {
+    justify-content: left;
+    margin: auto;
+    padding: 0;
+  }
 }
 .shows__info-subtitle {
   color: #AFAFAF;
   padding: 0.5rem 0;
 }
+@media (min-width: 768px) {
+  .shows__info-subtitle {
+    display: none;
+  }
+}
 .shows__info-date {
   font-weight: 500;
   padding-bottom: 0.5rem;
 }
+@media (min-width: 768px) {
+  .shows__info-date {
+    padding: 0rem;
+  }
+}
 .shows__info-venue {
   padding-bottom: 0.5rem;
+  justify-content: left;
 }
 .shows__info-city {
   padding-bottom: 1rem;
@@ -265,4 +298,10 @@ a:hover, a:active {
   padding: 0.5rem;
   border-radius: 0.3125rem;
   font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .shows__info button {
+    flex-direction: row;
+    width: 20%;
+  }
 }/*# sourceMappingURL=shows.css.map */

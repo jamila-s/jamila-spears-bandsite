@@ -7,6 +7,10 @@
         font-size: 2rem;
         padding: 1rem;
         font-weight: 500;
+
+        @include tablet {
+            padding: 2rem;
+        }
     }
 
     &__info {
@@ -15,27 +19,64 @@
         flex-direction: column;
         border-bottom: $divider-line solid 2px;
         padding-bottom: .5rem;
+
+        @include tablet {
+            flex-direction: row;
+            
+           
+        }
+
         li {
             list-style-type: none;
             padding-left: 1rem;
+            
+
+            @include tablet { 
+            justify-content: left;
+            margin: auto;
+            padding: 0;
+
+            }
+           
         }
         &-subtitle {
             color: $secondary-text-color;
             padding: .5rem 0;
+
+          @include tablet {
+            display: none;
+           
+          }
         }
 
         &-date {
             font-weight: 500;
             padding-bottom: .5rem;
+
+            @include tablet {
+               padding: 0rem;
+               
+              }
         }
 
         &-venue {
             padding-bottom: .5rem;
+            justify-content: left;
+
+            // @include tablet {
+            //     margin: auto;
+                
+            //    }
         }
 
         &-city {
             
             padding-bottom: 1rem;
+
+            // @include tablet {
+            //     margin: auto;
+                
+            //    }
        }
 
         button {
@@ -47,6 +88,12 @@
             padding: .5rem;
             border-radius: .3125rem;
             font-size: 1.5rem;
+
+
+            @include tablet {
+                flex-direction: row;
+                width: 20%;
+            }
         }
     }
 

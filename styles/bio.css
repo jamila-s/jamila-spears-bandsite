@@ -39,6 +39,11 @@
   display: block;
   height: 50vh;
 }
+@media (min-width: 768px) {
+  .hero__shows {
+    padding-top: 6rem;
+  }
+}
 .hero__title {
   color: #FFFFFF;
   padding: 2rem 1rem 1rem 1rem;
