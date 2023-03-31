@@ -2,17 +2,53 @@
 @use './mixins' as *;
 
 .shows {
-    
-    padding: 1rem;
 
     &__title {
         font-size: 2rem;
+        padding: 1rem;
+        font-weight: 500;
     }
 
     &__info {
 
+        display: flex;
+        flex-direction: column;
+        border-bottom: $divider-line solid 2px;
+        padding-bottom: .5rem;
+        li {
+            list-style-type: none;
+            padding-left: 1rem;
+        }
         &-subtitle {
             color: $secondary-text-color;
+            padding: .5rem 0;
+        }
+
+        &-date {
+            font-weight: 500;
+            padding-bottom: .5rem;
+        }
+
+        &-venue {
+            padding-bottom: .5rem;
+        }
+
+        &-city {
+            
+            padding-bottom: 1rem;
+       }
+
+        button {
+            align-content: center;
+            background-color: $primary-text-dark;
+            color: $primary-text-light;
+            width: 93%;
+            margin: 1rem auto;
+            padding: .5rem;
+            border-radius: .3125rem;
+            font-size: 1.5rem;
         }
     }
+
+   
 }

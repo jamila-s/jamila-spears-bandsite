@@ -200,6 +200,7 @@
   background: #323232;
   color: #FFFFFF;
   position: relative;
+  margin-top: 1rem;
 }
 .footer__container {
   display: flex;

@@ -136,6 +136,7 @@ a:hover, a:active {
   background: #323232;
   color: #FFFFFF;
   position: relative;
+  margin-top: 1rem;
 }
 .footer__container {
   display: flex;
@@ -226,12 +227,42 @@ a:hover, a:active {
   }
 }
 
-.shows {
-  padding: 1rem;
-}
 .shows__title {
   font-size: 2rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+.shows__info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: #E1E1E1 solid 2px;
+  padding-bottom: 0.5rem;
+}
+.shows__info li {
+  list-style-type: none;
+  padding-left: 1rem;
 }
 .shows__info-subtitle {
   color: #AFAFAF;
+  padding: 0.5rem 0;
+}
+.shows__info-date {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.shows__info-venue {
+  padding-bottom: 0.5rem;
+}
+.shows__info-city {
+  padding-bottom: 1rem;
+}
+.shows__info button {
+  align-content: center;
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 93%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=shows.css.map */
