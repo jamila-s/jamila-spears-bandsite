@@ -375,4 +375,13 @@ a:visited {
 
 a:hover, a:active {
   color: #FFFFFF;
+}
+
+.form__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+.form__container label {
+  color: #AFAFAF;
 }/*# sourceMappingURL=bio.css.map */

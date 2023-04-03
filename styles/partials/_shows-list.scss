@@ -22,8 +22,8 @@
 
         @include tablet {
             flex-direction: row;
-            
-           
+            text-align: left;
+            justify-content: space-around;
         }
 
         li {
@@ -32,10 +32,11 @@
             
 
             @include tablet { 
-            justify-content: left;
+            text-align: left;
             margin: auto;
             padding: 0;
-
+            justify-content: space-around;
+               
             }
            
         }
@@ -55,28 +56,32 @@
 
             @include tablet {
                padding: 0rem;
-               
+               display: inline-flex;
               }
         }
 
         &-venue {
             padding-bottom: .5rem;
             justify-content: left;
+            text-align: left;
+            border: solid red;
 
-            // @include tablet {
-            //     margin: auto;
+            @include tablet {
+                margin: auto;
+            display: inline-flex;
+            width: 20%;
                 
-            //    }
+         }
         }
 
         &-city {
             
             padding-bottom: 1rem;
 
-            // @include tablet {
-            //     margin: auto;
-                
-            //    }
+            @include tablet {
+                margin: auto;
+                display: inline-flex;
+               }
        }
 
         button {

@@ -251,6 +251,8 @@ a:hover, a:active {
 @media (min-width: 768px) {
   .shows__info {
     flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
   }
 }
 .shows__info li {
@@ -259,9 +261,10 @@ a:hover, a:active {
 }
 @media (min-width: 768px) {
   .shows__info li {
-    justify-content: left;
+    text-align: left;
     margin: auto;
     padding: 0;
+    justify-content: space-around;
   }
 }
 .shows__info-subtitle {
@@ -280,14 +283,30 @@ a:hover, a:active {
 @media (min-width: 768px) {
   .shows__info-date {
     padding: 0rem;
+    display: inline-flex;
   }
 }
 .shows__info-venue {
   padding-bottom: 0.5rem;
   justify-content: left;
+  text-align: left;
+  border: solid red;
+}
+@media (min-width: 768px) {
+  .shows__info-venue {
+    margin: auto;
+    display: inline-flex;
+    width: 20%;
+  }
 }
 .shows__info-city {
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__info-city {
+    margin: auto;
+    display: inline-flex;
+  }
 }
 .shows__info button {
   align-content: center;
