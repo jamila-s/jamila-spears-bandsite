@@ -117,8 +117,9 @@ a:hover, a:active {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-shows.jpg);
   background-size: cover;
   background-position: center;
-  display: block;
-  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
 }
 @media (min-width: 768px) {
   .hero__shows {
@@ -130,11 +131,22 @@ a:hover, a:active {
   padding: 2rem 1rem 1rem 1rem;
   font-size: 1.5rem;
 }
+.hero__title-container {
+  display: block;
+  width: 75%;
+}
 .hero__title-sub {
   color: #FFFFFF;
   padding: 1rem 3rem 1rem 1rem;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   font-weight: 500;
+}
+.hero iframe {
+  width: 90%;
+  height: 15vh;
+  margin: auto;
+  padding: 1rem 0;
+  border-radius: 2%;
 }
 
 .footer {
@@ -142,6 +154,7 @@ a:hover, a:active {
   color: #FFFFFF;
   position: relative;
   margin-top: 1rem;
+  font-size: 1.5rem;
 }
 .footer__container {
   display: flex;
@@ -232,9 +245,13 @@ a:hover, a:active {
   }
 }
 
+.shows {
+  text-align: left;
+  padding-left: 1.5rem;
+}
 .shows__title {
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 3rem;
+  padding: 3rem 1rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -264,12 +281,13 @@ a:hover, a:active {
     text-align: left;
     margin: auto;
     padding: 0;
-    justify-content: space-around;
   }
 }
 .shows__info-subtitle {
   color: #AFAFAF;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .shows__info-subtitle {
@@ -278,19 +296,21 @@ a:hover, a:active {
 }
 .shows__info-date {
   font-weight: 500;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .shows__info-date {
     padding: 0rem;
     display: inline-flex;
+    width: 20%;
   }
 }
 .shows__info-venue {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   justify-content: left;
   text-align: left;
-  border: solid red;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .shows__info-venue {
@@ -301,11 +321,13 @@ a:hover, a:active {
 }
 .shows__info-city {
   padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .shows__info-city {
     margin: auto;
     display: inline-flex;
+    width: 20%;
   }
 }
 .shows__info button {
@@ -313,9 +335,10 @@ a:hover, a:active {
   background-color: #323232;
   color: #FFFFFF;
   width: 93%;
+  height: 5vh;
   margin: 1rem auto;
   padding: 0.5rem;
-  border-radius: 0.3125rem;
+  border-radius: 0.5rem;
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {

@@ -34,8 +34,9 @@
         background: linear-gradient(rgba(50, 50, 50, .5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-shows.jpg);
         background-size: cover;
         background-position: center;
-        display: block;
-        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
 
         @include tablet {
         padding-top: 6rem;
@@ -46,14 +47,29 @@
         color: $primary-text-light;
         padding: 2rem 1rem 1rem 1rem;
         font-size: 1.5rem;
+
+        
+        &-container {
+            display: block;
+            width: 75%;
+            }
+        
      
 
         &-sub {
             color: $primary-text-light;
             padding: 1rem 3rem 1rem 1rem;
-            font-size: 2.3rem;
+            font-size: 2.7rem;
             font-weight: 500;
             
         }
+    }
+
+    iframe{
+        width: 90%;
+        height: 15vh;
+        margin: auto;
+        padding: 1rem 0;
+        border-radius: 2%;
     }
 }
