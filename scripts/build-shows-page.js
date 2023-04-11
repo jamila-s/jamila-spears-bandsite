@@ -63,12 +63,34 @@ const showsListArray = [
 
 const showsList = document.querySelector('.shows');
 
+const showsListContainer = document.createElement('div');
+showsListContainer.classList.add('shows__container');
+
 const showsTitle = document.createElement('p');
 showsTitle.classList.add('shows__title');
 showsTitle.innerText='Shows';
 
 showsList.appendChild(showsTitle);
 
+const sub_date = document.createElement('p');
+    sub_date.classList.add('shows__sub-date');
+    sub_date.innerText='Date';
+
+const sub_venue = document.createElement('p');
+    sub_venue.classList.add('shows__sub-venue');
+    sub_venue.innerText='Venue';
+
+const sub_location = document.createElement('p');
+    sub_location.classList.add('shows__sub-location');
+    sub_location.innerText='Location';
+
+
+
+
+
+showsList.appendChild(sub_date);
+showsList.appendChild(sub_location);
+showsList.appendChild(sub_venue);
 
 for (let i = 0; i < showsListArray.length; i++) {
 
@@ -125,8 +147,10 @@ for (let i = 0; i < showsListArray.length; i++) {
     showsListInfo.appendChild(showsListLocation);
     showsListInfo.appendChild(showsListButton);
 
+    showsListContainer.appendChild(showsListInfo);
+
     // Append ul to section
-    showsList.appendChild(showsListInfo);
+    showsList.appendChild(showsListContainer);
  }
 
 console.log(showsList);

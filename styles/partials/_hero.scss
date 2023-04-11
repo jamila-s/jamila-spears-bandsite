@@ -2,17 +2,15 @@
 @use './mixins' as *;
 
 .hero {
-
-   
     background-size: cover;
-   
     width: 100%;
     display: flex;
     justify-content: left;
 
-    @include tablet {
-     padding: 0rem 2.25rem;
-    }
+        @include tablet {
+            padding: 0rem 2.25rem;
+        }
+
 
     h1 {
         color: $primary-text-light;
@@ -39,7 +37,12 @@
         height: 40vh;
 
         @include tablet {
-        padding-top: 6rem;
+        padding-top: 2rem;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            height: 70vh;
         }
     }
 
@@ -48,10 +51,23 @@
         padding: 2rem 1rem 1rem 1rem;
         font-size: 1.5rem;
 
+        @include desktop {
+            font-size: 2rem;
+        }
+
         
         &-container {
             display: block;
             width: 75%;
+
+            @include tablet {
+                width: 60%;
+            }
+
+            @include desktop {
+                padding: 10rem;
+                width: 60%;
+            }
             }
         
      
@@ -62,6 +78,9 @@
             font-size: 2.7rem;
             font-weight: 500;
             
+            @include desktop {
+                font-size: 5rem;
+            }
         }
     }
 
@@ -71,5 +90,19 @@
         margin: auto;
         padding: 1rem 0;
         border-radius: 2%;
+
+        @include tablet {
+            width: 40%;
+            margin: 1rem ;
+        }
+
+        @include desktop {
+            margin-top: 15rem;
+            height: 22vh;
+            border-radius: 6%;
+            width: 35%;
+        }
+
+        
     }
 }

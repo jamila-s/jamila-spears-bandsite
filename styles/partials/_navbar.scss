@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
 
     @include tablet {
        justify-content: left;

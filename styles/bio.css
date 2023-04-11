@@ -42,7 +42,13 @@
 }
 @media (min-width: 768px) {
   .hero__shows {
-    padding-top: 6rem;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__shows {
+    flex-direction: row;
+    height: 70vh;
   }
 }
 .hero__title {
@@ -50,9 +56,25 @@
   padding: 2rem 1rem 1rem 1rem;
   font-size: 1.5rem;
 }
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+}
 .hero__title-container {
   display: block;
   width: 75%;
+}
+@media (min-width: 768px) {
+  .hero__title-container {
+    width: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title-container {
+    padding: 10rem;
+    width: 60%;
+  }
 }
 .hero__title-sub {
   color: #FFFFFF;
@@ -60,12 +82,31 @@
   font-size: 2.7rem;
   font-weight: 500;
 }
+@media (min-width: 1280px) {
+  .hero__title-sub {
+    font-size: 5rem;
+  }
+}
 .hero iframe {
   width: 90%;
   height: 15vh;
   margin: auto;
   padding: 1rem 0;
   border-radius: 2%;
+}
+@media (min-width: 768px) {
+  .hero iframe {
+    width: 40%;
+    margin: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero iframe {
+    margin-top: 15rem;
+    height: 22vh;
+    border-radius: 6%;
+    width: 35%;
+  }
 }
 
 .biography {
@@ -219,6 +260,7 @@
   position: relative;
   margin-top: 1rem;
   font-size: 1.5rem;
+  overflow-x: hidden;
 }
 .footer__container {
   display: flex;
@@ -314,6 +356,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   .navbar {
