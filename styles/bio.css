@@ -438,6 +438,59 @@ a:hover, a:active {
   font-weight: 600;
   margin: 1rem;
 }
+.form__container {
+  display: flex;
+}
+.form__container img {
+  width: 3rem;
+  height: 2rem;
+}
 .form__container label {
   color: #AFAFAF;
+}
+.form__container-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0 3rem 3rem;
+}
+.form__container-input #userName {
+  height: 3rem;
+  width: 90%;
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  border-color: #AFAFAF;
+}
+.form__container-input #userComment {
+  height: 6rem;
+  width: 90%;
+}
+.form__container-input button {
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 60%;
+  height: 7vh;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+.comment__container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+}
+.comment__container-mini {
+  display: flex;
+  flex-direction: row;
+}
+.comment__name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 7rem 0 2rem;
+}
+.comment__date {
+  width: 20%;
+  text-align: right;
 }/*# sourceMappingURL=bio.css.map */
