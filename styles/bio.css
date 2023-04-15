@@ -442,8 +442,11 @@ a:hover, a:active {
   display: flex;
 }
 .form__container img {
-  width: 3rem;
-  height: 2rem;
+  margin-left: 2rem;
+  height: 70px;
+  width: 80px;
+  border-radius: 50%;
+  display: inline-block;
 }
 .form__container label {
   color: #AFAFAF;
@@ -468,29 +471,54 @@ a:hover, a:active {
 .form__container-input button {
   background-color: #323232;
   color: #FFFFFF;
-  width: 60%;
+  width: 90%;
   height: 7vh;
-  margin: 1rem auto;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   font-size: 2rem;
 }
 
 .comment__container {
   display: flex;
-  flex-direction: column;
+  border-bottom: 1px #AFAFAF solid;
+  padding: 2rem 0;
+  width: 95%;
   margin: auto;
-  width: 80%;
+}
+.comment__container-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  width: 100%;
 }
 .comment__container-mini {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.comment__container .dot {
+  margin-left: 2rem;
+  height: 70px;
+  width: 80px;
+  background-color: #AFAFAF;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 1rem;
 }
 .comment__name {
   font-weight: 500;
   font-size: 1.5rem;
-  margin: 0 7rem 0 2rem;
+  padding: 1rem 4rem 0 0;
 }
 .comment__date {
-  width: 20%;
   text-align: right;
+  font-size: 1.5rem;
+  color: #AFAFAF;
+}
+.comment__text {
+  margin: auto;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
 }/*# sourceMappingURL=bio.css.map */
