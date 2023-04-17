@@ -125,6 +125,7 @@ a:hover, a:active {
 @media (min-width: 768px) {
   .hero__shows {
     padding-top: 2rem;
+    height: 50vh;
   }
 }
 @media (min-width: 1280px) {
@@ -166,7 +167,7 @@ a:hover, a:active {
 }
 @media (min-width: 1280px) {
   .hero__title-sub {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .hero iframe {
@@ -488,7 +489,7 @@ a:hover, a:active {
   background-color: #323232;
   color: #FFFFFF;
   width: 93%;
-  height: 5vh;
+  height: 6vh;
   margin: 1rem auto;
   padding: 0.5rem;
   border-radius: 0.5rem;

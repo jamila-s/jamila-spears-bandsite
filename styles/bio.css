@@ -43,6 +43,7 @@
 @media (min-width: 768px) {
   .hero__shows {
     padding-top: 2rem;
+    height: 50vh;
   }
 }
 @media (min-width: 1280px) {
@@ -84,7 +85,7 @@
 }
 @media (min-width: 1280px) {
   .hero__title-sub {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .hero iframe {

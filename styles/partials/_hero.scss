@@ -38,6 +38,7 @@
 
         @include tablet {
         padding-top: 2rem;
+        height: 50vh;
         }
 
         @include desktop {
@@ -79,7 +80,7 @@
             font-weight: 500;
             
             @include desktop {
-                font-size: 5rem;
+                font-size: 4rem;
             }
         }
     }
