@@ -17,11 +17,6 @@ const commentInfo= [
         text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
      },
 ]
-const formSubmission = document.querySelector('.form__container-input')
-
-
-// formSubmission.addEventListener('submit', function (event) {
-//     event.preventDefault();
 
 
 function displayComment(comment) {
@@ -62,31 +57,22 @@ function displayComment(comment) {
 
 }
 
-// Add event listener to the comment form
-const commentsForm = document.querySelector('form__container');
-commentsForm.addEventListener('submit', event => {
-  event.preventDefault(); // Prevent the form from reloading the page
-  
-  // Construct a new comment object
-  const nameInput = document.getElementById('userName');
-  const commentInput = document.getElementById('userComment');
-  const newComment = {
-    name: nameInput.value,
-    timestamp: Date.now(),
-    text: commentInput.value
-  };
+const form = document.querySelector('.form__container');
 
-    // Add the new comment to the array
-    commentInfo.push(newComment);
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const datePosted = Date.now();
+  const formattedDate = new Date(datePosted).toLocaleDateString();
+
+  console.log('date posted', formattedDate);
+  console.log('user', event.target.userName.value);
+  console.log('message', event.target.userComment.value);
   
-    // // Clear all comments from the page
-    // const container = document.getElementById('comments-container');
-    // container.innerHTML = '';
-    
-    // Re-render all comments on the page
-    renderComments();
-    
-    // Clear the input fields
-    nameInput.value = '';
-    commentInput.value = '';
-  });
+});
+
+const newCommentsSection = []
+
+function newComments () { 
+    const commentSection = document.querySelector('.comments__section')
+}
