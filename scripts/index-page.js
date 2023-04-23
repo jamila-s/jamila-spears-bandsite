@@ -20,13 +20,18 @@ const commentInfo= [
 
 
 function displayComment(comment) {
+
     const commentSection = document.querySelector('.comments__section');
 
+    for (let i = 0; i < commentInfo.length; i++) {
+
     const commentContainer = document.createElement('div');
-    commentContainer.classList.add('.coment__container');
+    commentContainer.classList.add('comment__container');
 
     const dot = document.createElement('span');
     dot.classList.add('dot');
+
+    commentContainer.appendChild(dot);
 
     const infoContainer = document.createElement('div');
     infoContainer.classList.add('comment__container-info');
@@ -44,35 +49,34 @@ function displayComment(comment) {
     commentText.classList.add('comment__text');
 
 
-    
+    commentName.innerText = commentInfo[i].name;
+    commentText.innerText = commentInfo[i].text;
   
-    commentContainer.appendChild('dot');
-    commentContainer.appendChild('infoContainer');
-    infoContainer.appendChild('miniContainer');
-    miniContainer.appendChild('commentName');
-    miniContainer.appendChild('commentDate');
-    infoContainer.appendChild('commentText');
+   
+    commentContainer.appendChild(infoContainer);
+    infoContainer.appendChild(miniContainer);
+    miniContainer.appendChild(commentName);
+    miniContainer.appendChild(commentDate);
+    infoContainer.appendChild(commentText);
 
-    commentSection.appendChild('commentContainer');
-
+    commentSection.appendChild(commentContainer);
+   }
 }
 
-const form = document.querySelector('.form__container');
+
+const form = document.querySelector('.form__container-input');
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const datePosted = Date.now();
-  const formattedDate = new Date(datePosted).toLocaleDateString();
+  const userNameInput = document.getElementById('userName');
+  const userCommentInput = document.getElementById('userComment');
 
-  console.log('date posted', formattedDate);
-  console.log('user', event.target.userName.value);
-  console.log('message', event.target.userComment.value);
+  const newCommentInfo = {name: userNameInput.value, comment: userCommentInput.value}
+  commentInfo.unshift(newCommentInfo);
+
+  console.log(newCommentInfo)
   
+  displayComment ()
 });
 
-const newCommentsSection = []
-
-function newComments () { 
-    const commentSection = document.querySelector('.comments__section')
-}
