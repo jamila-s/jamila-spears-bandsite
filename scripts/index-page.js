@@ -20,19 +20,27 @@ const commentInfo= [
 
 
 function displayComment(comment) {
+
+   
     const commentSection = document.querySelector('.comments__section');
 
+    for (let i = 0; i < commentInfo.length; i++) {
+
     const commentContainer = document.createElement('div');
-    commentContainer.classList.add('.coment__container');
+    commentContainer.classList.add('comment__container');
 
     const dot = document.createElement('span');
     dot.classList.add('dot');
+
+    commentContainer.appendChild(dot);
+    
 
     const infoContainer = document.createElement('div');
     infoContainer.classList.add('comment__container-info');
 
     const miniContainer = document.createElement('div');
     miniContainer.classList.add('comment__container-mini');
+
 
     const commentName = document.createElement('p');
     commentName.classList.add('comment__name');
@@ -44,35 +52,43 @@ function displayComment(comment) {
     commentText.classList.add('comment__text');
 
 
+    commentName.innerText = commentInfo[i].name;
+    commentText.innerText = commentInfo[i].text;
+  
     
-  
-    commentContainer.appendChild('dot');
-    commentContainer.appendChild('infoContainer');
-    infoContainer.appendChild('miniContainer');
-    miniContainer.appendChild('commentName');
-    miniContainer.appendChild('commentDate');
-    infoContainer.appendChild('commentText');
+    commentContainer.appendChild(infoContainer);
+    infoContainer.appendChild(miniContainer);
+    miniContainer.appendChild(commentName);
+    miniContainer.appendChild(commentDate);
+    infoContainer.appendChild(commentText);
 
-    commentSection.appendChild('commentContainer');
-
+    commentSection.appendChild(commentContainer);
+    }
+    
 }
+displayComment()
 
-const form = document.querySelector('.form__container');
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
 
-  const datePosted = Date.now();
-  const formattedDate = new Date(datePosted).toLocaleDateString();
 
-  console.log('date posted', formattedDate);
-  console.log('user', event.target.userName.value);
-  console.log('message', event.target.userComment.value);
-  
+const form = document.querySelector('.form__container-input');
+
+
+
+ form.addEventListener('submit', function (event) {
+   event.preventDefault();
+
+ const userNameInput = document.getElementById('userName')
+ const userCommentInput = document.getElementById('userComment')
+
+const newCommentInfo = {name: userNameInput.value, comment: userCommentInput.value};
+commentInfo.unshift(newCommentInfo);
+
+console.log(commentInfo)
 });
 
-const newCommentsSection = []
 
-function newComments () { 
-    const commentSection = document.querySelector('.comments__section')
-}
+
+
+
+
