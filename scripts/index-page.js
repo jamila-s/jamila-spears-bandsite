@@ -72,10 +72,13 @@ form.addEventListener('submit', function (event) {
   const userNameInput = document.getElementById('userName');
   const userCommentInput = document.getElementById('userComment');
 
-  const newCommentInfo = {name: userNameInput.value, comment: userCommentInput.value}
+  const newCommentInfo = {name: userNameInput.value, text: userCommentInput.value}
   commentInfo.unshift(newCommentInfo);
 
   console.log(newCommentInfo)
+
+//   userCommentInput.value = '';
+//   userNameInput.value = '';
   
   displayComment ()
 });
