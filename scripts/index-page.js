@@ -77,9 +77,12 @@ form.addEventListener('submit', function (event) {
 
   console.log(newCommentInfo)
 
-//   userCommentInput.value = '';
-//   userNameInput.value = '';
-  
-  displayComment ()
-});
 
+  
+displayComment()
+
+  userCommentInput.value = '';
+  userNameInput.value = '';
+ 
+});
+displayComment ()
