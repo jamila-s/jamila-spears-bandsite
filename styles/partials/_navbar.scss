@@ -57,7 +57,8 @@
            
             &--active {
                 border-bottom: $primary-text-light solid 4px ;
-               
+                color: $primary-text-light;
+                font-weight: 500;
             }
         }
         
@@ -65,12 +66,14 @@
         a{
             font-size: 1.5rem;
             text-decoration: none;
-            color: $secondary-text-color;
+            // color: $secondary-text-color;
             margin: auto;
             padding-top: 16px;
            
+            .activeNav {
+                color: $primary-text-light;
+            }
 
-            
             @include tablet {
                 padding: 1.875rem 1.875rem 1.5rem 10px;
                 font-size: 1.3rem;
@@ -80,6 +83,8 @@
                 padding: 1.25rem 1rem 1.5rem 1.875rem;
                 font-size: 1.3rem;
             }
+
+            
         }
 
     }

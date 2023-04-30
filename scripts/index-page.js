@@ -18,12 +18,23 @@ const commentInfo= [
      },
 ]
 
+const commentSection = document.querySelector('.comments__section');
+
+const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key="fa5afeea-d74a-4045-9408-860afa912b92"'
+axios
+   .get(commentsURL)
+   .then((response) => {
+      const userData = response.data;
+      displayComment(userData);
+   })
+   .catch((error) => {
+      console.log(error)
+   })
 
 function displayComment(comment) {
-
-    const commentSection = document.querySelector('.comments__section');
-
+    
     for (let i = 0; i < commentInfo.length; i++) {
+      const userInfo = userData[i]
 
     const commentContainer = document.createElement('div');
     commentContainer.classList.add('comment__container');
@@ -49,8 +60,10 @@ function displayComment(comment) {
     commentText.classList.add('comment__text');
 
 
-    commentName.innerText = commentInfo[i].name;
-    commentText.innerText = commentInfo[i].text;
+    commentName.innerText = userInfo.name;
+   //  commentDate.innerText = formatDate(userInfo.time)
+    commentText.innerText = userInfo.comment;
+    
   
    
     commentContainer.appendChild(infoContainer);
@@ -79,7 +92,7 @@ form.addEventListener('submit', function (event) {
 
 
   
-displayComment()
+displayComment(newCommentInfo)
 
   userCommentInput.value = '';
   userNameInput.value = '';

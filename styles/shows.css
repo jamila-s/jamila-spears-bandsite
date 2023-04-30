@@ -55,13 +55,17 @@
 }
 .navbar__links-item--active {
   border-bottom: #FFFFFF solid 4px;
+  color: #FFFFFF;
+  font-weight: 500;
 }
 .navbar__links a {
   font-size: 1.5rem;
   text-decoration: none;
-  color: #AFAFAF;
   margin: auto;
   padding-top: 16px;
+}
+.navbar__links a .activeNav {
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .navbar__links a {
@@ -200,7 +204,7 @@ a:hover, a:active {
 @media (min-width: 1280px) {
   .hero iframe {
     margin-top: 15rem;
-    height: 22vh;
+    height: 25vh;
     border-radius: 6%;
     width: 35%;
   }
