@@ -1,39 +1,41 @@
-const commentInfo= [
-     {
-        name: 'Connor Walton',
-        time: '02/17/2021',
-        text: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-     },
+// const commentInfo= [
+//      {
+//         name: 'Connor Walton',
+//         time: '02/17/2021',
+//         text: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
+//      },
 
-     {
-        name: 'Emilie Beach',
-        time: '01/09/2021',
-        text: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-     },
+//      {
+//         name: 'Emilie Beach',
+//         time: '01/09/2021',
+//         text: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
+//      },
 
-     {
-        name: 'Miles Acosta',
-        time: '12/20/2020',
-        text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-     },
-]
+//      {
+//         name: 'Miles Acosta',
+//         time: '12/20/2020',
+//         text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+//      },
+// ]
 
 const commentSection = document.querySelector('.comments__section');
 
 const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key="fa5afeea-d74a-4045-9408-860afa912b92"'
+let userData = []
+
 axios
    .get(commentsURL)
    .then((response) => {
-      const userData = response.data;
+      userData = response.data;
       displayComment(userData);
    })
    .catch((error) => {
       console.log(error)
    })
-
-function displayComment(comment) {
+   
+function displayComment(userData) {
     
-    for (let i = 0; i < commentInfo.length; i++) {
+    for (let i = 0; i < userData.length; i++) {
       const userInfo = userData[i]
 
     const commentContainer = document.createElement('div');
@@ -77,6 +79,7 @@ function displayComment(comment) {
 }
 
 
+
 const form = document.querySelector('.form__container-input');
 
 form.addEventListener('submit', function (event) {
@@ -86,16 +89,21 @@ form.addEventListener('submit', function (event) {
   const userCommentInput = document.getElementById('userComment');
 
   const newCommentInfo = {name: userNameInput.value, text: userCommentInput.value}
-  commentInfo.unshift(newCommentInfo);
+  userData.unshift(newCommentInfo);
 
   console.log(newCommentInfo)
 
-
+  axios
+  .post(newCommentInfo)
+  .then((response) => {
+     // userInfo.unshift(userData);
+     displayComment(userData)
+  })
   
-displayComment(newCommentInfo)
+// displayComment(userData)
 
   userCommentInput.value = '';
   userNameInput.value = '';
  
 });
-displayComment ()
+// displayComment (userData)
