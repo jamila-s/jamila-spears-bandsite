@@ -20,7 +20,7 @@
 
 const commentSection = document.querySelector('.comments__section');
 
-const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key="fa5afeea-d74a-4045-9408-860afa912b92"'
+const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key=fa5afeea-d74a-4045-9408-860afa912b92'
 let userData = []
 
 axios
@@ -63,7 +63,7 @@ function displayComment(userData) {
 
 
     commentName.innerText = userInfo.name;
-   //  commentDate.innerText = formatDate(userInfo.time)
+   commentDate.innerText = userInfo.timestamp
     commentText.innerText = userInfo.comment;
     
   
@@ -82,23 +82,31 @@ function displayComment(userData) {
 
 const form = document.querySelector('.form__container-input');
 
+
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   const userNameInput = document.getElementById('userName');
   const userCommentInput = document.getElementById('userComment');
 
-  const newCommentInfo = {name: userNameInput.value, text: userCommentInput.value}
-  userData.unshift(newCommentInfo);
+//   const newCommentInfo = {name: userNameInput.value, text: userCommentInput.value}
+//   userData.unshift(newCommentInfo);
 
-  console.log(newCommentInfo)
+//   console.log(newCommentInfo);
 
-  axios
-  .post(newCommentInfo)
-  .then((response) => {
-     // userInfo.unshift(userData);
-     displayComment(userData)
+  
+  
+  axios.post(commentsURL, {
+   name: userNameInput.value,
+   comment: userCommentInput.value
   })
+  .then((response) => {
+      console.log (response)
+      userData.unshift(response.data)
+       displayComment(userData)
+    
+    })
+  
   
 // displayComment(userData)
 

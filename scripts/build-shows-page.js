@@ -1,65 +1,66 @@
-const showsListArray = [
+// const showsListArray = [
    
-    {
-       subtitle_date: 'Date',
-       date:  'Mon Sept 06 2021',
-       subtitle_venue: 'Venue',
-       venue: 'Ronald Lane',
-       subtitle_location: 'Location',
-       location: 'San Francisco, CA',
-       button: 'Buy Tickets',
-    },
+//     {
+//        subtitle_date: 'Date',
+//        date:  'Mon Sept 06 2021',
+//        subtitle_venue: 'Venue',
+//        venue: 'Ronald Lane',
+//        subtitle_location: 'Location',
+//        location: 'San Francisco, CA',
+//        button: 'Buy Tickets',
+//     },
 
-    {
-        subtitle_date: 'Date',
-        date:  'Tue Sept 21 2021',
-        subtitle_venue: 'Venue',
-        venue: 'Pier 3 East',
-        subtitle_location: 'Location',
-        location: 'San Francisco, CA',
-        button: 'Buy Tickets',
-    },
+//     {
+//         subtitle_date: 'Date',
+//         date:  'Tue Sept 21 2021',
+//         subtitle_venue: 'Venue',
+//         venue: 'Pier 3 East',
+//         subtitle_location: 'Location',
+//         location: 'San Francisco, CA',
+//         button: 'Buy Tickets',
+//     },
 
-    {
-        subtitle_date: 'Date',
-        date:  'Fri Oct 15 2021',
-        subtitle_venue: 'Venue',
-        venue: 'View Lounge',
-        subtitle_location: 'Location',
-        location: 'San Francisco, CA',
-        button: 'Buy Tickets',
-    },
+//     {
+//         subtitle_date: 'Date',
+//         date:  'Fri Oct 15 2021',
+//         subtitle_venue: 'Venue',
+//         venue: 'View Lounge',
+//         subtitle_location: 'Location',
+//         location: 'San Francisco, CA',
+//         button: 'Buy Tickets',
+//     },
 
-    {
-        subtitle_date: 'Date',
-        date:  'Sat Nov 06 2021',
-        subtitle_venue: 'Venue',
-        venue: 'Hyatt Agency ',
-        subtitle_location: 'Location',
-        location: 'San Francisco, CA',
-        button: 'Buy Tickets',
-    },
+//     {
+//         subtitle_date: 'Date',
+//         date:  'Sat Nov 06 2021',
+//         subtitle_venue: 'Venue',
+//         venue: 'Hyatt Agency ',
+//         subtitle_location: 'Location',
+//         location: 'San Francisco, CA',
+//         button: 'Buy Tickets',
+//     },
 
-    {
-        subtitle_date: 'Date',
-        date:  'Fri Nov 26 2021',
-        subtitle_venue: 'Venue',
-        venue: 'Moscow Center',
-        subtitle_location: 'Location',
-        location: 'San Francisco, CA',
-        button: 'Buy Tickets',
-    },
+//     {
+//         subtitle_date: 'Date',
+//         date:  'Fri Nov 26 2021',
+//         subtitle_venue: 'Venue',
+//         venue: 'Moscow Center',
+//         subtitle_location: 'Location',
+//         location: 'San Francisco, CA',
+//         button: 'Buy Tickets',
+//     },
 
-    {
-        subtitle_date: 'Date',
-        date:  'Wed Dec 15 2021',
-        subtitle_venue: 'Venue',
-        venue: 'Press Club ',
-        subtitle_location: 'Location',
-        location: 'San Francisco, CA',
-        button: 'Buy Tickets',
-    },
-];
+//     {
+//         subtitle_date: 'Date',
+//         date:  'Wed Dec 15 2021',
+//         subtitle_venue: 'Venue',
+//         venue: 'Press Club ',
+//         subtitle_location: 'Location',
+//         location: 'San Francisco, CA',
+//         button: 'Buy Tickets',
+//     },
+// ];
+
 
 const showsList = document.querySelector('.shows');
 
@@ -92,7 +93,24 @@ showsList.appendChild(sub_date);
 showsList.appendChild(sub_location);
 showsList.appendChild(sub_venue);
 
-for (let i = 0; i < showsListArray.length; i++) {
+
+const showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=fa5afeea-d74a-4045-9408-860afa912b92'
+let showsData = [];
+
+axios
+    .get(showsURL)
+    .then((response) => {
+        showsData = response.data;
+        displayShows(showsData)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
+    function displayShows(showsData) {
+
+for (let i = 0; i < showsData.length; i++) {
+    const showsInfo = showsData[i]
 
 
     // Create elements and assign classes to each
@@ -103,11 +121,13 @@ for (let i = 0; i < showsListArray.length; i++) {
 
     // Shows list subtitle - date 
     const showsSubtitle_date = document.createElement('li');
-    showsSubtitle_date.classList.add('shows__info-subtitle')
+    showsSubtitle_date.classList.add('shows__info-subtitle');
+    showsSubtitle_date.innerText = 'DATE';
 
     // Shows list dates
     const showsListDate = document.createElement('li');
-    showsListDate.classList.add('shows__info-date')
+    showsListDate.classList.add('shows__info-date');
+    showsListDate.innerText = showsInfo.date;
 
     // Shows list subtitle - venue
     const showsSubtitle_venue = document.createElement('li');
@@ -115,7 +135,8 @@ for (let i = 0; i < showsListArray.length; i++) {
 
     // Shows list venues
     const showsListVenue = document.createElement('li');
-    showsListVenue.classList.add('shows__info-venue')
+    showsListVenue.classList.add('shows__info-venue');
+    showsSubtitle_venue.innerText = 'VENUE';
 
     // Shows list subtitle - location
     const showsSubtitle_location = document.createElement('li');
@@ -124,19 +145,20 @@ for (let i = 0; i < showsListArray.length; i++) {
     // Shows list locations
     const showsListLocation = document.createElement('li');
     showsListLocation.classList.add('shows__info-city')
+    showsSubtitle_location.innerText = 'LOCATION';
 
     // Shows list buttons
     const showsListButton = document.createElement('button')
     showsListButton.classList.add()
+    showsListButton.innerText = "BUY TICKETS"
 
     // Adding text from array to elements
-    showsSubtitle_date.innerText = showsListArray[i].subtitle_date;
-    showsSubtitle_venue.innerText = showsListArray[i].subtitle_venue;
-    showsSubtitle_location.innerText = showsListArray[i].subtitle_location;
-    showsListDate.innerText = showsListArray[i].date;
-    showsListVenue.innerText = showsListArray[i].venue;
-    showsListLocation.innerText = showsListArray[i].location;
-    showsListButton.innerText = showsListArray[i].button;
+    
+  
+    
+    showsListVenue.innerText = showsInfo.place;
+    showsListLocation.innerText = showsInfo.location;
+   
 
     // Appending list items to ul element
     showsListInfo.appendChild(showsSubtitle_date);
@@ -152,5 +174,6 @@ for (let i = 0; i < showsListArray.length; i++) {
     // Append ul to section
     showsList.appendChild(showsListContainer);
  }
-
-console.log(showsList);
+    }
+console.log(showsData);
+displayShows(showsData)
