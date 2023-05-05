@@ -59,7 +59,7 @@
   font-weight: 500;
 }
 .navbar__links a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
   margin: auto;
   padding-top: 16px;
@@ -76,7 +76,7 @@
 @media (min-width: 1280px) {
   .navbar__links a {
     padding: 1.25rem 1rem 1.5rem 1.875rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
@@ -151,7 +151,7 @@ a:hover, a:active {
 }
 @media (min-width: 1280px) {
   .hero__title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .hero__title-container {
@@ -165,8 +165,9 @@ a:hover, a:active {
 }
 @media (min-width: 1280px) {
   .hero__title-container {
-    padding-top: 4rem;
+    padding-top: 8rem;
     width: 60%;
+    margin-top: 2rem;
   }
 }
 .hero__title-sub {
@@ -182,7 +183,7 @@ a:hover, a:active {
 }
 @media (min-width: 1280px) {
   .hero__title-sub {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 500;
   }
 }
