@@ -127,7 +127,7 @@ for (let i = 0; i < showsData.length; i++) {
     // Shows list dates
     const showsListDate = document.createElement('li');
     showsListDate.classList.add('shows__info-date');
-    showsListDate.innerText = showsInfo.date;
+    showsListDate.innerText = new Date(showsInfo.date).toLocaleDateString();
 
     // Shows list subtitle - venue
     const showsSubtitle_venue = document.createElement('li');
