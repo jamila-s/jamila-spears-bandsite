@@ -511,7 +511,7 @@ a:hover, a:active {
   margin: 1rem auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .shows__info button {

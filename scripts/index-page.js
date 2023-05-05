@@ -23,18 +23,25 @@ const commentSection = document.querySelector('.comments__section');
 const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key=fa5afeea-d74a-4045-9408-860afa912b92'
 let userData = []
 
+function getComments () {
 axios
    .get(commentsURL)
    .then((response) => {
       userData = response.data;
+      userData.sort( (a,b) => {
+         return b.timestamp - a.timestamp
+      }) 
       displayComment(userData);
    })
    .catch((error) => {
       console.log(error)
    })
-   
+}
+
+
 function displayComment(userData) {
-    
+    commentSection.innerText = '';
+
     for (let i = 0; i < userData.length; i++) {
       const userInfo = userData[i]
 
@@ -63,7 +70,7 @@ function displayComment(userData) {
 
 
     commentName.innerText = userInfo.name;
-   commentDate.innerText = userInfo.timestamp
+   commentDate.innerText = new Date (userInfo.timestamp).toLocaleDateString()
     commentText.innerText = userInfo.comment;
     
   
@@ -93,8 +100,6 @@ form.addEventListener('submit', function (event) {
 //   userData.unshift(newCommentInfo);
 
 //   console.log(newCommentInfo);
-
-  
   
   axios.post(commentsURL, {
    name: userNameInput.value,
@@ -102,12 +107,13 @@ form.addEventListener('submit', function (event) {
   })
   .then((response) => {
       console.log (response)
-      userData.unshift(response.data)
-       displayComment(userData)
+      // userData.unshift(response.data)
+      getComments()
+      //  displayComment()
     
     })
   
-  
+    
 // displayComment(userData)
 
   userCommentInput.value = '';
@@ -115,3 +121,4 @@ form.addEventListener('submit', function (event) {
  
 });
 // displayComment (userData)
+getComments ()
