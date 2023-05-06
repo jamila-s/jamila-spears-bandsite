@@ -72,7 +72,7 @@
             padding-top: 1rem;
 
             @include tablet {
-                padding-right: 48px;
+                margin-right: 3rem;
                 flex-wrap: nowrap;
                 min-width: 35%;
             }
@@ -80,7 +80,7 @@
     
         &-name {
             font-weight: 600;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
 
             @include tablet {
                 flex-wrap: nowrap;
@@ -88,7 +88,7 @@
         }
 
         &-address {
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             font-weight: 400;
         }
 
@@ -101,7 +101,7 @@
     &__logo {
         margin-top: 40px;
         padding-bottom: 16px;
-        
+       
 
         @include tablet{
         position: absolute;

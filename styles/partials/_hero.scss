@@ -34,23 +34,28 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        height: 40vh;
+        height: 55vh;
 
         @include tablet {
         padding-top: 2rem;
-        height: 50vh;
+        height: 75vh;
         }
 
         @include desktop {
             flex-direction: row;
-            height: 70vh;
+            height: 80vh;
         }
     }
 
     &__title {
         color: $primary-text-light;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 3rem 1rem 1rem 2rem;
         font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 3rem;
+            font-weight: 500;
+        }
 
         @include desktop {
             font-size: 2rem;
@@ -62,12 +67,13 @@
             width: 75%;
 
             @include tablet {
-                width: 60%;
+                width: 80%;
             }
 
             @include desktop {
-                padding: 10rem;
+                padding-top: 8rem;
                 width: 60%;
+                margin-top: 2rem;
             }
             }
         
@@ -75,31 +81,39 @@
 
         &-sub {
             color: $primary-text-light;
-            padding: 1rem 3rem 1rem 1rem;
+            padding: 1rem 3rem 1rem 2rem;
             font-size: 2.7rem;
             font-weight: 500;
+
+            @include tablet {
+                font-size: 5rem;
+                
+            }
             
             @include desktop {
-                font-size: 4rem;
+                font-size: 5rem;
+                font-weight: 500;
             }
         }
     }
 
     iframe{
         width: 90%;
-        height: 15vh;
-        margin: auto;
-        padding: 1rem 0;
+        height: 23vh;
+        margin:  auto;
+        padding: 1rem 0rem 1rem 0rem;
         border-radius: 2%;
 
         @include tablet {
-            width: 40%;
-            margin: 1rem ;
+            width: 60%;
+            margin: 1rem 1rem 3rem 1rem;
+            padding: 1rem 0rem 2rem 0rem;
+            height: 30vh;
         }
 
         @include desktop {
             margin-top: 15rem;
-            height: 22vh;
+            height: 25vh;
             border-radius: 6%;
             width: 35%;
         }

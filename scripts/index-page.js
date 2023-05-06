@@ -1,30 +1,34 @@
-const commentInfo= [
-     {
-        name: 'Connor Walton',
-        time: '02/17/2021',
-        text: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-     },
 
-     {
-        name: 'Emilie Beach',
-        time: '01/09/2021',
-        text: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-     },
+const commentSection = document.querySelector('.comments__section');
 
-     {
-        name: 'Miles Acosta',
-        time: '12/20/2020',
-        text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-     },
-]
+// API URl + Comments + API Key 
+const commentsURL = 'https://project-1-api.herokuapp.com/comments?api_key=fa5afeea-d74a-4045-9408-860afa912b92'
 
+// Initialize userData with open array to use globally 
+let userData = []
 
-function displayComment(comment) {
+// Function to get comments from API and sort in date order from most recent 
+function getComments () {
+axios
+   .get(commentsURL)
+   .then((response) => {
+      userData = response.data;
+      userData.sort( (a,b) => {
+         return b.timestamp - a.timestamp
+      }) 
+      displayComment(userData);
+   })
+   .catch((error) => {
+      console.log(error)
+   })
+}
 
-   
-    const commentSection = document.querySelector('.comments__section');
+// Function to create elements, add data from API and display comments on bio page 
+function displayComment(userData) {
+    commentSection.innerText = '';
 
-    for (let i = 0; i < commentInfo.length; i++) {
+    for (let i = 0; i < userData.length; i++) {
+      const userInfo = userData[i]
 
     const commentContainer = document.createElement('div');
     commentContainer.classList.add('comment__container');
@@ -33,7 +37,6 @@ function displayComment(comment) {
     dot.classList.add('dot');
 
     commentContainer.appendChild(dot);
-    
 
     const infoContainer = document.createElement('div');
     infoContainer.classList.add('comment__container-info');
@@ -52,10 +55,11 @@ function displayComment(comment) {
     commentText.classList.add('comment__text');
 
 
-    commentName.innerText = commentInfo[i].name;
-    commentText.innerText = commentInfo[i].text;
-  
+    commentName.innerText = userInfo.name;
+    commentDate.innerText = new Date (userInfo.timestamp).toLocaleDateString()
+    commentText.innerText = userInfo.comment;
     
+
     commentContainer.appendChild(infoContainer);
     infoContainer.appendChild(miniContainer);
     miniContainer.appendChild(commentName);
@@ -63,32 +67,44 @@ function displayComment(comment) {
     infoContainer.appendChild(commentText);
 
     commentSection.appendChild(commentContainer);
-    }
-    
+   }
 }
 displayComment()
 
 
 
 
+// const form = document.querySelector('.form__container-input');
+
+
+
+// Grabbing comments from form and posting them on site
 const form = document.querySelector('.form__container-input');
 
+
+// Grabbing comments from form and posting them on site
+const form = document.querySelector('.form__container-input');
 
 
  form.addEventListener('submit', function (event) {
    event.preventDefault();
 
- const userNameInput = document.getElementById('userName')
- const userCommentInput = document.getElementById('userComment')
+  const userNameInput = document.getElementById('userName');
+  const userCommentInput = document.getElementById('userComment');
+  
+  axios.post(commentsURL, {
+   name: userNameInput.value,
+   comment: userCommentInput.value
+  })
+  .then((response) => {
+      console.log (response)
+      getComments()
+    })
+  
 
-const newCommentInfo = {name: userNameInput.value, comment: userCommentInput.value};
-commentInfo.unshift(newCommentInfo);
-
-console.log(commentInfo)
+  userCommentInput.value = '';
+  userNameInput.value = '';
+ 
 });
 
-
-
-
-
-
+getComments ();

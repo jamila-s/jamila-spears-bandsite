@@ -55,13 +55,17 @@
 }
 .navbar__links-item--active {
   border-bottom: #FFFFFF solid 4px;
+  color: #FFFFFF;
+  font-weight: 500;
 }
 .navbar__links a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
-  color: #AFAFAF;
   margin: auto;
   padding-top: 16px;
+}
+.navbar__links a .activeNav {
+  color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .navbar__links a {
@@ -72,7 +76,7 @@
 @media (min-width: 1280px) {
   .navbar__links a {
     padding: 1.25rem 1rem 1.5rem 1.875rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
@@ -120,24 +124,30 @@ a:hover, a:active {
   background-position: center;
   display: flex;
   flex-direction: column;
-  height: 40vh;
+  height: 55vh;
 }
 @media (min-width: 768px) {
   .hero__shows {
     padding-top: 2rem;
-    height: 50vh;
+    height: 75vh;
   }
 }
 @media (min-width: 1280px) {
   .hero__shows {
     flex-direction: row;
-    height: 70vh;
+    height: 80vh;
   }
 }
 .hero__title {
   color: #FFFFFF;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 2rem;
   font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+    font-weight: 500;
+  }
 }
 @media (min-width: 1280px) {
   .hero__title {
@@ -150,43 +160,52 @@ a:hover, a:active {
 }
 @media (min-width: 768px) {
   .hero__title-container {
-    width: 60%;
+    width: 80%;
   }
 }
 @media (min-width: 1280px) {
   .hero__title-container {
-    padding: 10rem;
+    padding-top: 8rem;
     width: 60%;
+    margin-top: 2rem;
   }
 }
 .hero__title-sub {
   color: #FFFFFF;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem 3rem 1rem 2rem;
   font-size: 2.7rem;
   font-weight: 500;
 }
+@media (min-width: 768px) {
+  .hero__title-sub {
+    font-size: 5rem;
+  }
+}
 @media (min-width: 1280px) {
   .hero__title-sub {
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 500;
   }
 }
 .hero iframe {
   width: 90%;
-  height: 15vh;
+  height: 23vh;
   margin: auto;
-  padding: 1rem 0;
+  padding: 1rem 0rem 1rem 0rem;
   border-radius: 2%;
 }
 @media (min-width: 768px) {
   .hero iframe {
-    width: 40%;
-    margin: 1rem;
+    width: 60%;
+    margin: 1rem 1rem 3rem 1rem;
+    padding: 1rem 0rem 2rem 0rem;
+    height: 30vh;
   }
 }
 @media (min-width: 1280px) {
   .hero iframe {
     margin-top: 15rem;
-    height: 22vh;
+    height: 25vh;
     border-radius: 6%;
     width: 35%;
   }
@@ -255,14 +274,14 @@ a:hover, a:active {
 }
 @media (min-width: 768px) {
   .footer__contacts-description {
-    padding-right: 48px;
+    margin-right: 3rem;
     flex-wrap: nowrap;
     min-width: 35%;
   }
 }
 .footer__contacts-name {
   font-weight: 600;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__contacts-name {
@@ -270,7 +289,7 @@ a:hover, a:active {
   }
 }
 .footer__contacts-address {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   font-weight: 400;
 }
 .footer__contacts-email {
@@ -315,8 +334,8 @@ a:hover, a:active {
     color: #AFAFAF;
     margin: 3rem;
     position: absolute;
-    top: 81.5%;
-    left: 22%;
+    top: 93%;
+    left: 23.5%;
     padding-bottom: 3rem;
   }
 }
@@ -338,8 +357,8 @@ a:hover, a:active {
     color: #AFAFAF;
     margin: 3rem;
     position: absolute;
-    top: 81.5%;
-    left: 41%;
+    top: 93%;
+    left: 42%;
     padding-bottom: 3rem;
   }
 }
@@ -361,8 +380,8 @@ a:hover, a:active {
     color: #AFAFAF;
     margin: 3rem;
     position: absolute;
-    top: 81.5%;
-    left: 60.5%;
+    top: 93%;
+    left: 61.5%;
     padding-bottom: 3rem;
   }
 }
@@ -378,7 +397,7 @@ a:hover, a:active {
 }
 .shows__title {
   font-size: 3rem;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 2rem 1rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -493,7 +512,7 @@ a:hover, a:active {
   margin: 1rem auto;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .shows__info button {

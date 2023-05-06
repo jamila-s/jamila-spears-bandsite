@@ -71,6 +71,14 @@
         width: 95%;
         margin: auto;
 
+        &:hover {
+            background-color: $alt-light-background;
+        }
+
+        &:active {
+            background-color: $divider-line;
+        }
+
         &-info {
         display: flex;
         flex-direction: column;
