@@ -69,17 +69,6 @@ function displayComment(userData) {
     commentSection.appendChild(commentContainer);
    }
 }
-displayComment()
-
-
-
-
-// const form = document.querySelector('.form__container-input');
-
-
-
-// Grabbing comments from form and posting them on site
-const form = document.querySelector('.form__container-input');
 
 
 // Grabbing comments from form and posting them on site
